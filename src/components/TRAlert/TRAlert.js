@@ -32,23 +32,7 @@ const TRAlert = () => {
 					</div>
 				</div>
 				<div id="message" className="h-20 overflow-y-auto">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur
-					rem ea fugiat quae natus dolores expedita veniam atque sit vero
-					dignissimos sapiente odit, cumque nulla aliquam animi inventore, modi
-					corporis? Obcaecati distinctio consequatur rerum nobis! Doloribus sint
-					natus ab at sunt deserunt perferendis consequatur, quisquam dicta
-					fugit, possimus tempore, quo placeat maiores enim odio? Ea quidem
-					quibusdam ad. Voluptatum, similique. Earum aliquid hic alias
-					perspiciatis expedita in? Iusto distinctio nisi dolorum blanditiis ab
-					recusandae minus veritatis animi nobis cum ullam voluptate excepturi,
-					at impedit reprehenderit aliquid a atque. Sequi, iusto. Illum, magni
-					debitis. Et alias quos quis excepturi a obcaecati dolor fugit. Porro,
-					inventore id. Ullam repellendus maiores necessitatibus autem minus ea,
-					eum tenetur fuga, in perspiciatis animi libero inventore. Ducimus
-					delectus, accusamus dolorem, sint, ipsa debitis ratione eius eum saepe
-					dolor in sit sequi suscipit tempore recusandae necessitatibus! Maxime,
-					ut maiores. Repellat molestiae facere inventore maxime aliquam libero
-					id?
+					Message
 				</div>
 			</section>
 		</article>
