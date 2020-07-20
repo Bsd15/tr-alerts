@@ -1,5 +1,5 @@
 import React from 'react';
-import { useConfig } from './hooks/useConfig';
+import useConfig from './hooks/useConfig';
 
 const TRAlert = () => {
 	const { show, alertConfig } = useConfig();
