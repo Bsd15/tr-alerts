@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export const useConfig = () => {
 	const [show, setShow] = useState(false);
-	const [alertConfig, setAlertConfig] = useState({});
+	const initAlertConfig = { message: '', alertType: '', heading: '' };
+	const [alertConfig, setAlertConfig] = useState(initAlertConfig);
 
 	const showAlert = (message, alertType, heading = '') => {
 		if (message) {
@@ -16,9 +17,9 @@ export const useConfig = () => {
 	};
 
 	const hideAlert = () => {
-		setAlertConfig({});
+		setAlertConfig(initAlertConfig);
 		setShow(false);
 	};
 
-	return [show, alertConfig, showAlert, hideAlert];
+	return { show, alertConfig, showAlert, hideAlert };
 };
