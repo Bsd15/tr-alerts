@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 
-export const useConfig = () => {
+const useConfig = () => {
 	const [show, setShow] = useState(false);
 	const initAlertConfig = { message: '', alertType: '', heading: '' };
 	const [alertConfig, setAlertConfig] = useState(initAlertConfig);
@@ -23,3 +23,5 @@ export const useConfig = () => {
 
 	return { show, alertConfig, showAlert, hideAlert };
 };
+
+export default useConfig;
