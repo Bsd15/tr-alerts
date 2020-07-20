@@ -1,15 +1,14 @@
 import React from 'react';
+import { useConfig } from './hooks/useConfig';
 
 const TRAlert = () => {
+	const { show, alertConfig } = useConfig();
 	return (
 		<article className="fixed bottom-0 left-0 right-0 mx-auto container w-full lg:w-1/2 p-2 bg-white shadow-2xl border-t-8">
 			<section className="grid grid-row-2" id="content">
 				<div className="flex items-center justify-between">
 					<div className=" h-8 text-lg font-bold overflow-hidden" id="heading">
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla
-						voluptas vero ratione corporis sed dicta, tempore necessitatibus
-						illum sint ullam deleniti fugiat, quam adipisci ex laborum eum
-						quidem. Aperiam, laudantium!{' '}
+						{alertConfig.heading}
 					</div>
 					<div id="closeButton">
 						<div className="w-6 h-6">
@@ -32,7 +31,7 @@ const TRAlert = () => {
 					</div>
 				</div>
 				<div id="message" className="h-20 overflow-y-auto">
-					Message
+					{alertConfig.message}
 				</div>
 			</section>
 		</article>
