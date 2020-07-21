@@ -6,15 +6,7 @@ const App = () => {
 	const showAlert = useAlertConfig()[1];
 	return (
 		<div className="container">
-			<button
-				onClick={() =>
-					showAlert(
-						'Test 2',
-						'Test Alert Type',
-						'Test Heading from app component'
-					)
-				}
-			>
+			<button onClick={() => showAlert('Heading', 'Message', 'success')}>
 				Show Alert
 			</button>
 			<TRAlert />
