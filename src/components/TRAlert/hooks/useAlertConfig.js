@@ -10,7 +10,12 @@ const useAlertConfig = () => {
 		listeners.forEach((listener) => {
 			listener(alertConfig);
 		});
-		console.log(alertConfig);
+	};
+	const closeAlert = () => {
+		alertConfig = { message: '', alertType: '', heading: '', show: false };
+		listeners.forEach((listener) => {
+			listener(alertConfig);
+		});
 	};
 	useEffect(() => {
 		listeners.push(setState);
@@ -18,7 +23,7 @@ const useAlertConfig = () => {
 			listeners = listeners.filter((listener) => listener !== setState);
 		};
 	}, [setState]);
-	return [alertConfig, showAlert];
+	return [alertConfig, showAlert, closeAlert];
 };
 
 export default useAlertConfig;
