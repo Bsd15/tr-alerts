@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 let alertConfig = { message: '', alertType: '', heading: '', show: false };
 let listeners = [];
 
-const useAlert = () => {
+const useAlertConfig = () => {
 	const setState = useState(alertConfig)[1];
 	const showAlert = (message, alertType, heading) => {
 		alertConfig = { message, alertType, heading, show: true };
@@ -21,4 +21,4 @@ const useAlert = () => {
 	return [alertConfig, showAlert];
 };
 
-export default useAlert;
+export default useAlertConfig;
