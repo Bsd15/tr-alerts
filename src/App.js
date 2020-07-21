@@ -1,9 +1,8 @@
 import React from 'react';
 import TRAlert from './components/TRAlert/TRAlert';
-import useAlertConfig from './components/TRAlert/hooks/useAlertConfig';
-
+import useAlert from './components/TRAlert/hooks/useAlert';
 const App = () => {
-	const showAlert = useAlertConfig()[1];
+	const showAlert = useAlert();
 	return (
 		<div className="container">
 			<section className="grid grid-rows-4 gap-2 mx-auto w-1/3">
