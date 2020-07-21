@@ -1,5 +1,5 @@
 import React from 'react';
-import { TRAlert, useAlert } from './components';
+import { TRAlert, useAlert } from './lib';
 const App = () => {
 	const showAlert = useAlert();
 	return (
