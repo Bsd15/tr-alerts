@@ -1,9 +1,9 @@
 import React from 'react';
 import TRAlert from './components/TRAlert/TRAlert';
-import useAlert from './components/TRAlert/hooks/useAlert';
+import useAlertConfig from './components/TRAlert/hooks/useAlertConfig';
 
 const App = () => {
-	const showAlert = useAlert()[1];
+	const showAlert = useAlertConfig()[1];
 	return (
 		<div className="container">
 			<button
