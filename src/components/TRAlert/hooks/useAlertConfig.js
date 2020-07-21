@@ -1,18 +1,18 @@
 import { useState, useEffect } from 'react';
 
-let alertConfig = { message: '', alertType: '', heading: '', show: false };
+let alertConfig = { heading: '', message: '', alertType: '', show: false };
 let listeners = [];
 
 const useAlertConfig = () => {
 	const setState = useState(alertConfig)[1];
-	const showAlert = (message, alertType, heading) => {
+	const showAlert = (heading, message, alertType = 'primary') => {
 		alertConfig = { message, alertType, heading, show: true };
 		listeners.forEach((listener) => {
 			listener(alertConfig);
 		});
 	};
 	const closeAlert = () => {
-		alertConfig = { message: '', alertType: '', heading: '', show: false };
+		alertConfig = { heading: '', message: '', alertType: '', show: false };
 		listeners.forEach((listener) => {
 			listener(alertConfig);
 		});
