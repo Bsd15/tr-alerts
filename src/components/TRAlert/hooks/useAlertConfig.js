@@ -26,7 +26,7 @@ const useAlertConfig = (shouldListen = true) => {
 				listeners = listeners.filter((listener) => listener !== setState);
 			}
 		};
-	}, [setState]);
+	}, [setState, shouldListen]);
 	return [alertConfig, showAlert, closeAlert];
 };
 
