@@ -1,13 +1,20 @@
 import React from 'react';
 import useAlertConfig from './hooks/useAlertConfig';
 import classes from './TRAlert.module.css';
+
 const TRAlert = () => {
 	const [alertConfig, , closeAlert] = useAlertConfig();
+	const alertType = {
+		primary: 'border-blue-500',
+		danger: 'border-red-600',
+		info: 'border-yellow-500',
+		success: 'border-green-500',
+	};
 	return (
 		<article
 			className={`fixed bottom-0 left-0 right-0 mx-auto container w-full lg:w-1/2 p-2 bg-white shadow-2xl border-t-8 ${
-				classes.alertBox
-			} ${alertConfig.show ? classes.alertBoxShow : ''}`}
+				alertType[alertConfig.alertType]
+			} ${classes.alertBox} ${alertConfig.show ? classes.alertBoxShow : ''}`}
 		>
 			<section className="grid grid-row-2" id="content">
 				<div className="flex items-center justify-between">
