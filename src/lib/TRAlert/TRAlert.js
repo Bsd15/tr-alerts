@@ -1,5 +1,6 @@
 import React from 'react';
 import useAlertConfig from './hooks/useAlertConfig';
+import './index.css'
 import classes from './TRAlert.module.css';
 
 const TRAlert = () => {
