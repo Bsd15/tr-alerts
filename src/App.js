@@ -1,6 +1,5 @@
 import React from 'react';
-import TRAlert from './components/TRAlert/TRAlert';
-import useAlert from './components/TRAlert/hooks/useAlert';
+import { TRAlert, useAlert } from './components';
 const App = () => {
 	const showAlert = useAlert();
 	return (
