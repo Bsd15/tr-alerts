@@ -1,8 +1,8 @@
 import React from 'react';
-import useConfig from './hooks/useConfig';
+import useAlert from './hooks/useAlert';
 
 const TRAlert = () => {
-	const { show, alertConfig } = useConfig();
+	const [alertConfig, showAlert] = useAlert();
 	return (
 		<article className="fixed bottom-0 left-0 right-0 mx-auto container w-full lg:w-1/2 p-2 bg-white shadow-2xl border-t-8">
 			<section className="grid grid-row-2" id="content">
@@ -10,7 +10,12 @@ const TRAlert = () => {
 					<div className=" h-8 text-lg font-bold overflow-hidden" id="heading">
 						{alertConfig.heading}
 					</div>
-					<div id="closeButton">
+					<div
+						id="closeButton"
+						onClick={() =>
+							showAlert('Test', 'Alert Type Test', 'Heading', true)
+						}
+					>
 						<div className="w-6 h-6">
 							<svg
 								// height="512pt"
