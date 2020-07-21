@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 let alertConfig = { heading: '', message: '', alertType: '', show: false };
 let listeners = [];
 
-const useAlertConfig = () => {
+const useAlertConfig = (shouldListen = true) => {
 	const setState = useState(alertConfig)[1];
 	const showAlert = (heading, message, alertType = 'primary') => {
 		alertConfig = { message, alertType, heading, show: true };
@@ -18,9 +18,13 @@ const useAlertConfig = () => {
 		});
 	};
 	useEffect(() => {
-		listeners.push(setState);
+		if (shouldListen) {
+			listeners.push(setState);
+		}
 		return () => {
-			listeners = listeners.filter((listener) => listener !== setState);
+			if (shouldListen) {
+				listeners = listeners.filter((listener) => listener !== setState);
+			}
 		};
 	}, [setState]);
 	return [alertConfig, showAlert, closeAlert];
