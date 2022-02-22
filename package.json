@@ -11,7 +11,7 @@
 		"type": "git",
 		"url": "https://github.com/Bsd15/tr-alerts"
 	},
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"dependencies": {},
 	"scripts": {
 		"build:css": "cross-env NODE_ENV=production postcss src/assets/styles/tailwind.css -o src/lib/TRAlert/index.css",
